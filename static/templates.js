@@ -8,9 +8,9 @@ templates['widget.tmpl'] = template({"1":function(depth0,helpers,partials,data) 
     + escapeExpression(lambda(depth0, depth0))
     + ".01._SL150_.jpg\" /></a>\n                                            </li>\n";
 },"3":function(depth0,helpers,partials,data) {
-  var helper, lambda=this.lambda, escapeExpression=this.escapeExpression, functionType="function", helperMissing=helpers.helperMissing;
+  var helper, functionType="function", helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression;
   return "                                                <tr>\n                                                    <td><a href=\"http://www.amazon.com/dp/"
-    + escapeExpression(lambda(depth0, depth0))
+    + escapeExpression(((helper = (helper = helpers.asin || (depth0 != null ? depth0.asin : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"asin","hash":{},"data":data}) : helper)))
     + "\">"
     + escapeExpression(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : helperMissing),(typeof helper === functionType ? helper.call(depth0, {"name":"title","hash":{},"data":data}) : helper)))
     + "</a></td>\n                                                    <td nowrap align=\"right\">"
