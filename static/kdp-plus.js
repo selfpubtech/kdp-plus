@@ -106,9 +106,9 @@ if (!Array.prototype.reduce) {
                 return b.revenue - a.revenue;
             });
 
-            var totalRevenue = sales.map(function(b) { return b.revenue } ).reduce(sum);
-            var totalSales = sales.map(function(b) { return b.sales } ).reduce(sum);
-            var totalBorrows = sales.map(function(b) { return b.borrows } ).reduce(sum);
+            var totalRevenue = sales.map(function(b) { return b.revenue } ).reduce(sum, 0);
+            var totalSales = sales.map(function(b) { return b.sales } ).reduce(sum, 0);
+            var totalBorrows = sales.map(function(b) { return b.borrows } ).reduce(sum, 0);
 
             var widgetContainerId = "#" + id + "-widget";
             $(widgetContainerId).empty().append(Handlebars.templates['widget.tmpl']({
@@ -136,8 +136,8 @@ if (!Array.prototype.reduce) {
             }
         }).pipe(function(data) {
             data = JSON.parse(data);
-            var borrows = data.borrowData.reduce(sum);
-            var sales = data.orderData.reduce(sum);
+            var borrows = data.borrowData.reduce(sum, 0);
+            var sales = data.orderData.reduce(sum, 0);
             return {
                 asin: book.asin,
                 title: book.title,
