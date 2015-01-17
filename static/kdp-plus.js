@@ -34,7 +34,7 @@ if (!Array.prototype.reduce) {
     var host = "https://selfpubtech.github.io/kdp-plus/static/";
     //host = "http://localhost:5555/";
 
-    var BORROW_RATE = 1.39;
+    var BORROW_RATE = 1.43;
     var EXCHANGE_RATE = {
         "USD": 1,
         "GBP": 1.6,
